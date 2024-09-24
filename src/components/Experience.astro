@@ -1,0 +1,47 @@
+---
+import ExperienceItems from '../components/ExperienceItems.astro';
+const EXPERIENCE = [
+	{
+		job: 'Desarrollador Fullstack',
+		date: 'En la actualidad',
+		title: 'JKM Comercializadora de Servicios',
+		content:
+			`Desarrolle un e-commerce para la empresa, utilizando APis de terceros para la muestra de productos y pagos en línea. 
+            Creación de un panel de administración para la gestión de productos y ventas.
+            Actualmente se encuentra en producción.
+            Utiliando tecnologías como React, Node.js, Express, PostgreSQL, Prisma, NextJS, NestJS, entre otras.`,
+	},
+	{
+		job: 'Desarrollador Fullstack',
+		date: 'En la actualidad',
+		title: 'Spartan Ingenieria Sanitaria',
+		content:
+			`Desarrolle un sistema de gestión de los proyectos y servicios que tiene la compañia, capaz de crear PDF para los clientes y poder ver diferentes ordenes y seguimiento a los proyectos.
+            Utiliando tecnologías como React, Node.js, Express, PostgreSQL, Prisma, NextJS, entre otras.`,
+	},
+	{
+		job: 'Desarrollador Mobile',
+		date: 'Agosto 2022',
+		title: 'Hi-Techdesing',
+		content:
+            `Desarrolle una e-commerce móvil enfocada en los adultos mayores, esta brinda servicios y productos para los adultos mayores, como servicios de enfermería, productos de cuidado personal, entre otros. 
+            Utiliando tecnologías como React Native, Java, Spring, MySQL, entre otras.`,
+	},
+];
+---
+
+<div class="w-full max-w-6xl mx-auto px-4 md:px-6">
+	<div class="flex flex-col justify-center divide-y ">
+		<div class="w-full max-w-3xl mx-auto">
+			<div class="-my-6">
+				{
+					EXPERIENCE.map((experience) => (
+						<div class="relative pl-8 sm:pl-32 py-6 group">
+							<ExperienceItems {...experience} />
+						</div>
+					))
+				}
+			</div>
+		</div>
+	</div>
+</div>

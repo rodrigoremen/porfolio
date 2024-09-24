@@ -1,22 +1,27 @@
 ---
 import Badge from '../components/Badge.astro';
+import SectionContainer from '../components/SectionContainer.astro';
 import Layout from '../layouts/Layout.astro';
 import LinkedIn from '../components/icons/LinkedIn.astro';
 import SocialPill from '../components/SocialPill.astro';
 import Github from '../components/icons/Github.astro';
 import Mail from '../components/icons/Mail.astro';
+import Experience from '../components/Experience.astro';
+import Code from '../components/icons/Code.astro';
+import ProjectsIcon from '../components/icons/Projects.astro';
+import Projects from '../components/Projects.astro';
 
 ---
 
 <Layout title="Rodrigo Dorantes Portfolio | Desarrollador y porgramador web" >
-	<main>
-		<section class="w-full lg:w-[740px] mx-auto py-44">
+	<main class="px-4">
+		<SectionContainer class="py-44 pb-22">
 			<img
 				class="rounded-full size-12 mb-4"
 				src="https://avatars.githubusercontent.com/u/106606020?v=4"
 				alt="rodrigoremen"
 			/>
-			<h1 class="text-white text-4xl font-bold flex flex-row gap-x-4 pb-10">
+			<h1 class="text-white text-2xl md:text-4xl lg:text-4xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
 				¡Hola! Soy Rodrigo Dorantes <div
 					class="flex justify-center items-center"
 				>
@@ -30,7 +35,7 @@ import Mail from '../components/icons/Mail.astro';
 					</a>
 				</div>
 			</h1>
-			<h2 class="text-xl opacity-75 text-wrap">
+			<h2 class="text-xl lg:text-xl opacity-75 text-wrap max-w-[700px]">
 				Soy un <span class="text-yellow-200/90">desarrollador web</span> con más
 				de 3 años de experiencia.
 				<span class="text-green-200/90">Orgullosamente desde México </span>,
@@ -46,20 +51,36 @@ import Mail from '../components/icons/Mail.astro';
 				> 🚀
 			</p>
 
-			<nav class="flex gap-x-4 mt-8">
+			<nav class="flex gap-4 mt-8 flex-wrap">
 				<SocialPill href="https://linkedin.com/in/rodrigo-dorantes">
-					<LinkedIn class="size-6"/>
+					<LinkedIn class="size-4 md:size-6"/>
 					LinkedIn
 				</SocialPill>
 				<SocialPill href="https://github.com/rodrigoremen">
-					<Github class="size-6"/>
+					<Github class="size-4 md:size-6"/>
 					Github
 				</SocialPill>
-				<SocialPill href="https://github.com/rodrigoremen">
-					<Mail class="size-6"/>
+				<SocialPill href="mailto:rodrigoivan234@gmail.com">
+					<Mail class="size-4 md:size-6"/>
 					rodrigoivan234@gmail.com
 				</SocialPill>
 			</nav>
-		</section>
+		</SectionContainer>
+
+		<SectionContainer id="experience">
+			<h2 class="text-3xl font-semibold flex gap-x-2 items-center py-12">
+				<Code clas="size-8" />
+				Experience Laboral
+			</h2>
+			<Experience />
+		</SectionContainer>
+
+		<SectionContainer id="projects">
+			<h2 class="text-3xl font-semibold flex gap-x-2 items-center py-12">
+				<ProjectsIcon clas="size-8" />
+				Proyectos
+			</h2>
+			<Projects />
+		</SectionContainer>
 	</main>
 </Layout>

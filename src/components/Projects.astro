@@ -1,0 +1,28 @@
+---
+const PROJECTS = [
+    {
+        title: "JKM - Ecommerce",
+        description: "Ecommerce de venta de varios productos tulizando APIs de terceros. Modulo de pagos cpn tarjeta de crédito y débito. Administración de productos, categorías, usuarios y pedidos.",
+        link: "#",
+        github: "https://github.com/rodrigoremen/appweb-jkm",
+        image: "/public/img/JKM.webp",
+        tags: ["NextJS", "NestJS", "TailwindCSS", "NextUI", "Prisma", "PostgreSQL", "TypeScript", "Docker", "JavaScript"]
+        
+    }
+]
+---
+
+{
+    PROJECTS.map(({title , description, tags, image}) => (
+        <article>
+            <h3 class="text-2xl font-semibold text-green-200/90 mb-4">{title}</h3>
+            <p class="text-lg mb-2 text-pretty">{description}</p>
+            <ul>
+                {tags.map(tag => (
+                    <li>{tag}</li>
+                ))}
+            </ul>
+            <img class="rounded shadow-2xl shadow-white/10" src={image} alt={`Proyecto ${title}`} />
+        </article>
+    ))
+}
