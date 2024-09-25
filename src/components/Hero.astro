@@ -1,0 +1,64 @@
+---
+import Badge from './Badge.astro';
+import Github from './icons/Github.astro';
+import LinkedIn from './icons/LinkedIn.astro';
+import Mail from './icons/Mail.astro';
+import WhatsApp from './icons/WhatsApp.astro';
+import SocialPill from './SocialPill.astro';
+---
+
+<div class="max-w-xl">
+	<div class="flex gap-4 mb-4">
+		<img
+			class="rounded-full shadow-lg size-16"
+			src="https://avatars.githubusercontent.com/u/106606020?v=4"
+			alt="rodrigoremen"
+		/>
+		<a
+			href="https://linkedin.com/in/rodrigo-dorantes"
+			target="_blank"
+			rel="noopener"
+            class="flex items-center transition md:justify-center md:hover:scale-105"
+            >
+			<Badge>Disponible para trabajar</Badge>
+		</a>
+	</div>
+	<h1
+		class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+	>
+		¡Hola! Soy Rodrigo Dorantes 👋
+	</h1>
+	<h2 class="mt-6 text-xl lg:text-xl text-wrap max-w-[700px]">
+		Soy un <span class="text-yellow-200/90">desarrollador web</span> con más de 3
+		años de experiencia.
+		<span class="text-green-200/90">Orgullosamente desde México </span>,
+		apasionado por el <span class="text-purple-300/90"
+			>código limpio y las últimas tecnologías.</span
+		>
+	</h2>
+	<p class="text-xl text-wrap">
+		Si necesitas una solución moderna, eficiente y que impresione... ¡estás en
+		el lugar correcto!
+	</p>
+
+	<nav class="flex gap-4 mt-8 flex-wrap">
+		<SocialPill
+			href="https://wa.me/7774429079?text=Hola%vi%tu%pagina%Hablemos!"
+		>
+			<WhatsApp class="size-4" />
+			WhatsApp
+		</SocialPill>
+		<SocialPill href="https://linkedin.com/in/rodrigo-dorantes">
+			<LinkedIn class="size-4" />
+			LinkedIn
+		</SocialPill>
+		<SocialPill href="https://github.com/rodrigoremen">
+			<Github class="size-4" />
+			Github
+		</SocialPill>
+		<SocialPill href="mailto:rodrigoivan234@gmail.com">
+			<Mail class="size-4" />
+			rodrigoivan234@gmail.com
+		</SocialPill>
+	</nav>
+</div>

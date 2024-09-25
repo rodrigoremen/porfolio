@@ -1,28 +1,141 @@
 ---
+import NextJS from './icons/NextJS.astro';
+import NestJS from './icons/NestJS.astro';
+import TailwindCSS from './icons/Tailwind.astro';
+import Prisma from './icons/Prisma.astro';
+import PostgreSQL from './icons/PostgreSQL.astro';
+import TypeScript from './icons/Typescript.astro';
+import Docker from './icons/Docker.astro';
+import LinkButton from './LinkButton.astro';
+import Github from './icons/Github.astro';
+import Link from './icons/Link.astro';
+
+const TAGS = {
+	NEXT: {
+		name: 'NextJS',
+		color: 'bg-black text-white',
+		icon: NextJS,
+	},
+	NEST: {
+		name: 'NestJS',
+		color: 'bg-red-300 text-slate-900',
+		icon: NestJS,
+	},
+	TAILWIND: {
+		name: 'TailwindCSS',
+		color: 'bg-blue-900 text-white',
+		icon: TailwindCSS,
+	},
+	PRISMA: {
+		name: 'Prisma',
+		color: 'bg-black text-white',
+		icon: Prisma,
+	},
+	POSTGRESQL: {
+		name: 'PostgreSQL',
+		color: 'bg-blue-900 text-white',
+		icon: PostgreSQL,
+	},
+	TYPESCRIPT: {
+		name: 'TypeScript',
+		color: 'bg-blue-900 text-white',
+		icon: TypeScript,
+	},
+	DOCKER: {
+		name: 'Docker',
+		color: 'bg-blue-900 text-white',
+		icon: Docker,
+	},
+};
 const PROJECTS = [
+	{
+		title: 'JKM - Ecommerce',
+		description:
+			'Ecommerce de venta de varios productos tulizando APIs de terceros. Modulo de pagos cpn tarjeta de crédito y débito. Administración de productos, categorías, usuarios y pedidos.',
+		link: '',
+		github: 'https://github.com/rodrigoremen/appweb-jkm',
+		image: '/img/JKM.webp',
+		tags: [
+			TAGS.NEXT,
+			TAGS.NEST,
+			TAGS.TAILWIND,
+			TAGS.PRISMA,
+			TAGS.POSTGRESQL,
+			TAGS.TYPESCRIPT,
+			TAGS.DOCKER,
+		],
+	},
     {
-        title: "JKM - Ecommerce",
-        description: "Ecommerce de venta de varios productos tulizando APIs de terceros. Modulo de pagos cpn tarjeta de crédito y débito. Administración de productos, categorías, usuarios y pedidos.",
-        link: "#",
-        github: "https://github.com/rodrigoremen/appweb-jkm",
-        image: "/public/img/JKM.webp",
-        tags: ["NextJS", "NestJS", "TailwindCSS", "NextUI", "Prisma", "PostgreSQL", "TypeScript", "Docker", "JavaScript"]
-        
+        title: 'Spartan - Proyectos',
+        description:
+            'Sistema de gestión de proyectos y servicios de la empresa. Creación de PDF para los clientes y seguimiento de los proyectos.',
+        link: '',
+        github: 'https://github.com/rodrigoremen/spartan-app',
+        image: '/img/Spartan.webp',
+        tags: [
+            TAGS.NEXT,
+            TAGS.TAILWIND,
+            TAGS.PRISMA,
+            TAGS.POSTGRESQL,
+            TAGS.TYPESCRIPT,
+        ],
     }
-]
+];
 ---
 
-{
-    PROJECTS.map(({title , description, tags, image}) => (
-        <article>
-            <h3 class="text-2xl font-semibold text-green-200/90 mb-4">{title}</h3>
-            <p class="text-lg mb-2 text-pretty">{description}</p>
-            <ul>
-                {tags.map(tag => (
-                    <li>{tag}</li>
-                ))}
-            </ul>
-            <img class="rounded shadow-2xl shadow-white/10" src={image} alt={`Proyecto ${title}`} />
-        </article>
-    ))
-}
+<div class="flex flex-col gap-y-16">
+	{
+		PROJECTS.map(({ image, title, description, tags, link, github }) => (
+			<article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+				<div class="w-full md:w-1/2">
+					<div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+						<img
+							alt="Recién llegado vs 5 años en Nueva Zelanda"
+							class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+							loading="lazy"
+							src={image}
+						/>
+					</div>
+				</div>
+
+				<div class="w-full md:w-1/2 md:max-w-lg">
+					<h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+						{title}
+					</h3>
+					<div class="flex flex-wrap mt-2">
+						<ul class="flex flex-wrap mb-2 gap-2">
+							{tags.map((tag) => (
+								<li>
+									<span
+										class={`flex gap-x-2 rounded-full text-xs ${tag.color} py-1 px-2 `}
+									>
+										<tag.icon class="size-4" />
+										{tag.name}
+									</span>
+								</li>
+							))}
+						</ul>
+
+						<div class="mt-2 text-gray-700 dark:text-gray-400">
+							{description}
+						</div>
+						<footer class="flex items-end justify-start mt-4 gap-x-4">
+							{github && (
+								<LinkButton href={github}>
+									<Github class="size-6" />
+									Codigo
+								</LinkButton>
+							)}
+							{link && (
+								<LinkButton href={link}>
+									<Link class="size-4" />
+									Vista previa
+								</LinkButton>
+							)}
+						</footer>
+					</div>
+				</div>
+			</article>
+		))
+	}
+</div>

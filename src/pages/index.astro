@@ -1,86 +1,45 @@
 ---
-import Badge from '../components/Badge.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 import Layout from '../layouts/Layout.astro';
-import LinkedIn from '../components/icons/LinkedIn.astro';
-import SocialPill from '../components/SocialPill.astro';
-import Github from '../components/icons/Github.astro';
-import Mail from '../components/icons/Mail.astro';
 import Experience from '../components/Experience.astro';
+import Case from '../components/icons/Case.astro';
 import Code from '../components/icons/Code.astro';
-import ProjectsIcon from '../components/icons/Projects.astro';
 import Projects from '../components/Projects.astro';
-
+import Hero from '../components/Hero.astro';
+import TitleSection from '../components/TitleSection.astro';
+import Smile from '../components/icons/Smile.astro';
+import SobreMi from '../components/SobreMi.astro';
 ---
 
-<Layout title="Rodrigo Dorantes Portfolio | Desarrollador y porgramador web" >
+<Layout title="Rodrigo Dorantes Portfolio | Desarrollador y porgramador web">
 	<main class="px-4">
-		<SectionContainer class="py-44 pb-22">
-			<img
-				class="rounded-full size-12 mb-4"
-				src="https://avatars.githubusercontent.com/u/106606020?v=4"
-				alt="rodrigoremen"
-			/>
-			<h1 class="text-white text-2xl md:text-4xl lg:text-4xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
-				¡Hola! Soy Rodrigo Dorantes <div
-					class="flex justify-center items-center"
-				>
-					<a
-						href="https://linkedin.com/in/rodrigo-dorantes"
-						target="_blank"
-						rel="noopener"
-						class="flex justify-center items-center"
-					>
-						<Badge>Disponible para trabajar</Badge>
-					</a>
-				</div>
-			</h1>
-			<h2 class="text-xl lg:text-xl opacity-75 text-wrap max-w-[700px]">
-				Soy un <span class="text-yellow-200/90">desarrollador web</span> con más
-				de 3 años de experiencia.
-				<span class="text-green-200/90">Orgullosamente desde México </span>,
-				apasionado por el <span class="text-purple-300/90"
-					>código limpio y las últimas tecnologías.</span
-				>
-			</h2>
-			<p class="text-xl opacity-70 text-wrap">
-				Si necesitas una solución moderna, eficiente y que impresione... ¡estás
-				en el lugar correcto!
-				<br /><span class="text-pink-200/90"
-					>Siempre en busca de nuevos retos y de crear algo increíble.</span
-				> 🚀
-			</p>
-
-			<nav class="flex gap-4 mt-8 flex-wrap">
-				<SocialPill href="https://linkedin.com/in/rodrigo-dorantes">
-					<LinkedIn class="size-4 md:size-6"/>
-					LinkedIn
-				</SocialPill>
-				<SocialPill href="https://github.com/rodrigoremen">
-					<Github class="size-4 md:size-6"/>
-					Github
-				</SocialPill>
-				<SocialPill href="mailto:rodrigoivan234@gmail.com">
-					<Mail class="size-4 md:size-6"/>
-					rodrigoivan234@gmail.com
-				</SocialPill>
-			</nav>
+		<SectionContainer class="py-16 md:py-36">
+			<Hero />
 		</SectionContainer>
-
-		<SectionContainer id="experience">
-			<h2 class="text-3xl font-semibold flex gap-x-2 items-center py-12">
-				<Code clas="size-8" />
+	</main>
+	<div class="space-y-24">
+		<SectionContainer id="experiencia">
+			<TitleSection>
+				<Case clas="size-7" />
 				Experience Laboral
-			</h2>
+			</TitleSection>
 			<Experience />
 		</SectionContainer>
 
-		<SectionContainer id="projects">
-			<h2 class="text-3xl font-semibold flex gap-x-2 items-center py-12">
-				<ProjectsIcon clas="size-8" />
+		<SectionContainer id="proyectos">
+			<TitleSection>
+				<Code clas="size-7" />
 				Proyectos
-			</h2>
+			</TitleSection>
 			<Projects />
 		</SectionContainer>
-	</main>
+
+		<SectionContainer id="sobre-mi">
+			<TitleSection>
+				<Smile clas="size-7" />
+				Conoceme
+			</TitleSection>
+			<SobreMi />
+		</SectionContainer>
+	</div>
 </Layout>
