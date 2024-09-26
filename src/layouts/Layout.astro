@@ -107,6 +107,25 @@ const { title } = Astro.props;
 					}
 				}
 			}
+
+			body {
+				background-color: var(--background-color);
+				color: var(--text-color);
+			}
+
+			@media (prefers-color-scheme: dark) {
+				body {
+					--background-color: #121212;
+					--text-color: #ffffff;
+				}
+			}
+
+			@media (prefers-color-scheme: light) {
+				body {
+					--background-color: #ffffff;
+					--text-color: #000000;
+				}
+			}
 		</style>
 	</body>
 </html>
