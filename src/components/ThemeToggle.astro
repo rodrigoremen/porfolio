@@ -67,7 +67,6 @@ const THEMES = ['Light', 'Dark', 'System'];
 	const getThemePreference = () => {
 		if (typeof localStorage !== 'undefined') {
 			const theme = localStorage.getItem('theme');
-			console.log('Stored Theme:', theme);
 			return theme ?? 'system';
 		}
 
