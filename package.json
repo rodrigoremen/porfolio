@@ -21,5 +21,8 @@
   "devDependencies": {
     "@astrojs/preact": "^3.5.3",
     "@astrojs/tailwind": "^5.1.1"
+  },
+  "engines": {
+    "node": ">=22"
   }
 }
