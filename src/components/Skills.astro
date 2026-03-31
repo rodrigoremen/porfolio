@@ -1,0 +1,39 @@
+---
+const SKILLS = [
+	{
+		title: 'Lenguajes',
+		items: ['TypeScript', 'JavaScript', 'Java 21', 'Dart', 'Kotlin', 'Swift'],
+	},
+	{
+		title: 'Frontend',
+		items: ['React', 'Next.js', 'React Native', 'Tailwind CSS', 'HTML5', 'CSS3'],
+	},
+	{
+		title: 'Backend',
+		items: ['Node.js', 'NestJS', 'Spring Boot', 'Express', 'Vert.x'],
+	},
+	{
+		title: 'Herramientas',
+		items: ['PostgreSQL', 'Prisma', 'Docker', 'Git', 'Debian Linux', 'GitHub Actions'],
+	},
+];
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+	{
+		SKILLS.map(({ title, items }) => (
+			<div class="p-6 rounded-2xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-emerald-500/50 transition-all group shadow-sm hover:shadow-md">
+				<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4 group-hover:text-emerald-500 transition-colors">
+					{title}
+				</h3>
+				<ul class="flex flex-wrap gap-2">
+					{items.map((item) => (
+						<li class="px-2 py-1 text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-md border border-slate-200 dark:border-slate-700">
+							{item}
+						</li>
+					))}
+				</ul>
+			</div>
+		))
+	}
+</div>

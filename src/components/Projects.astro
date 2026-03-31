@@ -6,6 +6,8 @@ import Prisma from './icons/Prisma.astro';
 import PostgreSQL from './icons/PostgreSQL.astro';
 import TypeScript from './icons/Typescript.astro';
 import Docker from './icons/Docker.astro';
+import Java from './icons/Java.astro';
+import SpringBoot from './icons/SpringBoot.astro';
 import LinkButton from './LinkButton.astro';
 import Github from './icons/Github.astro';
 import Link from './icons/Link.astro';
@@ -18,7 +20,7 @@ const TAGS = {
 	},
 	NEST: {
 		name: 'NestJS',
-		color: 'bg-red-300 text-slate-900',
+		color: 'bg-slate-900 text-[#e0234e]',
 		icon: NestJS,
 	},
 	TAILWIND: {
@@ -38,7 +40,7 @@ const TAGS = {
 	},
 	TYPESCRIPT: {
 		name: 'TypeScript',
-		color: 'bg-blue-900 text-white',
+		color: 'bg-[#3178c6] text-white',
 		icon: TypeScript,
 	},
 	DOCKER: {
@@ -46,14 +48,39 @@ const TAGS = {
 		color: 'bg-blue-900 text-white',
 		icon: Docker,
 	},
+	JAVA: {
+		name: 'Java 21',
+		color: 'bg-[#5382a1] text-white',
+		icon: Java,
+	},
+	SPRINGBOOT: {
+		name: 'Spring Boot',
+		color: 'bg-[#6db33f] text-white',
+		icon: SpringBoot,
+	},
 };
+
 const PROJECTS = [
 	{
-		title: 'JKM - Ecommerce',
+		title: 'Movivendor - Facturación Integral',
 		description:
-			'Ecommerce de venta de varios productos tulizando APIs de terceros. Modulo de pagos cpn tarjeta de crédito y débito. Administración de productos, categorías, usuarios y pedidos.',
+			'Motor de facturación híbrido (automático y manual) conectado vía API con proveedores externos. Migración crítica de Java 11 a 21 e integración con frameworks de alto rendimiento como Vert.x.',
 		link: '',
-		github: 'https://github.com/rodrigoremen/appweb-jkm',
+		github: '',
+		image: '/img/MVV.webp', 
+		tags: [
+			TAGS.JAVA,
+			TAGS.SPRINGBOOT,
+			TAGS.POSTGRESQL,
+			TAGS.DOCKER,
+		],
+	},
+	{
+		title: 'IngenieriaTI3 - Ecommerce Tech',
+		description:
+			'Plataforma completa utilizando NestJS y Next.js. Integración de APIs de Syscom y Conekta para gestión de productos y procesamiento de pagos con validación avanzada.',
+		link: '',
+		github: '',
 		image: '/img/JKM.webp',
 		tags: [
 			TAGS.NEXT,
@@ -62,24 +89,23 @@ const PROJECTS = [
 			TAGS.PRISMA,
 			TAGS.POSTGRESQL,
 			TAGS.TYPESCRIPT,
-			TAGS.DOCKER,
 		],
 	},
-    {
-        title: 'Spartan - Proyectos',
-        description:
-            'Sistema de gestión de proyectos y servicios de la empresa. Creación de PDF para los clientes y seguimiento de los proyectos.',
-        link: '',
-        github: 'https://github.com/rodrigoremen/spartan-app',
-        image: '/img/Spartan.webp',
-        tags: [
-            TAGS.NEXT,
-            TAGS.TAILWIND,
-            TAGS.PRISMA,
-            TAGS.POSTGRESQL,
-            TAGS.TYPESCRIPT,
-        ],
-    }
+	{
+		title: 'Spartan - Gestión de Proyectos',
+		description:
+			'Sistema robusto para gestionar servicios de ingeniería sanitaria. Generación de reportes PDF dinámicos y seguimiento granular de proyectos industriales.',
+		link: '',
+		github: 'https://github.com/rodrigoremen/spartan-app',
+		image: '/img/Spartan.webp',
+		tags: [
+			TAGS.NEXT,
+			TAGS.TAILWIND,
+			TAGS.PRISMA,
+			TAGS.POSTGRESQL,
+			TAGS.TYPESCRIPT,
+		],
+	}
 ];
 ---
 

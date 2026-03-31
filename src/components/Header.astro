@@ -8,6 +8,11 @@ const navItems = [
 		url: '/#experiencia',
 	},
 	{
+		title: 'Habilidades',
+		label: 'habilidades',
+		url: '/#habilidades',
+	},
+	{
 		title: 'Proyectos',
 		label: 'proyectos',
 		url: '/#proyectos',
@@ -34,7 +39,7 @@ const navItems = [
 		{
 			navItems.map((link) => (
 				<a
-					class="relative block px-2 py-2 transition hover:text-green-300 dark:hover:text-green-300"
+					class="relative block px-2 py-2 transition hover:text-emerald-400 dark:hover:text-emerald-400"
 					aria-label={link.label}
 					href={link.url}
 				>
@@ -56,9 +61,11 @@ const navItems = [
 				if (entry.isIntersecting) {
 					navItems.forEach((item) => {
 						if (item.getAttribute('aria-label') == entry.target.id) {
-							item.classList.add('text-green-300');
+							item.classList.add('text-emerald-500');
+							item.classList.add('dark:text-emerald-400');
 						} else {
-							item.classList.remove('text-green-300');
+							item.classList.remove('text-emerald-500');
+							item.classList.remove('dark:text-emerald-400');
 						}
 					});
 				}

@@ -3,45 +3,41 @@ import ExperienceItems from '../components/ExperienceItems.astro';
 const EXPERIENCE = [
 	{
 		job: 'Desarrollador Fullstack',
-		date: 'En la actualidad',
-		title: 'JKM Comercializadora de Servicios',
+		date: 'Noviembre 2024 - Presente',
+		title: 'Movivendor',
 		content:
-			`Desarrolle un e-commerce para la empresa, utilizando APis de terceros para la muestra de productos y pagos en línea. 
-            Creación de un panel de administración para la gestión de productos y ventas.
-            Actualmente se encuentra en producción.
-            Utiliando tecnologías como React, Node.js, Express, PostgreSQL, Prisma, NextJS, NestJS, entre otras.`,
+			`Diseñé y desarrollé un motor de facturación híbrido conectado vía API con proveedores externos. Lideré la migración crítica de backends de Java 11 a Java 21, implementando mejoras de rendimiento sobre un framework basado en Spring Boot y Vert.x. Administro servidores Debian y desarrollé microservicios para notificaciones vía WhatsApp y reportes optimizados.`,
 	},
 	{
 		job: 'Desarrollador Fullstack',
-		date: 'En la actualidad',
-		title: 'Spartan Ingenieria Sanitaria',
+		date: 'Julio 2024',
+		title: 'IngenieriaTI3',
 		content:
-			`Desarrolle un sistema de gestión de los proyectos y servicios que tiene la compañia, capaz de crear PDF para los clientes y poder ver diferentes ordenes y seguimiento a los proyectos.
-            Utilizando tecnologías como React, Node.js, Express, PostgreSQL, Prisma, NextJS, entre otras.`,
+			`Construí una plataforma de e-commerce completa utilizando NestJS y Next.js. Integré APIs de Syscom y Conekta para gestión de productos y pagos. Implementé un sistema de comisiones flexible, carga de archivos con Google Drive API y validación avanzada de formularios.`,
 	},
 	{
-		job: 'Desarrollador Mobile',
-		date: 'Agosto 2022',
-		title: 'Hi-Techdesing',
+		job: 'Desarrollador Fullstack',
+		date: 'Enero 2024 - Abril 2024',
+		title: 'Spartan Ingeniería Sanitaria',
 		content:
-            `Desarrolle una e-commerce móvil enfocada en los adultos mayores, esta brinda servicios y productos para los adultos mayores, como servicios de enfermería, productos de cuidado personal, entre otros. 
-            Utiliando tecnologías como React Native, Java, Spring, MySQL, entre otras.`,
+			`Desarrollé una aplicación web para la gestión integral de proyectos y servicios de la empresa. Implementé una API REST robusta y reutilizable utilizando Next.js, asegurando escalabilidad y confiabilidad en la gestión de datos con Prisma y PostgreSQL.`,
+	},
+	{
+		job: 'Desarrollador Móvil',
+		date: 'Mayo 2022 - Agosto 2022',
+		title: 'Hi-Techdesign',
+		content:
+			`Desarrollé una aplicación móvil de e-commerce enfocada en adultos mayores. Trabajé con Spring Boot para el backend y React Native/Expo para la experiencia móvil, integrando servicios de cuidado personal y enfermería.`,
 	},
 ];
 ---
 
-<div class="w-full max-w-6xl mx-auto px-4 md:px-6 ">
-	<div class="flex flex-col justify-center divide-y ">
-		<div class="w-full max-w-3xl mx-auto">
-			<div class="-my-6">
-				{
-					EXPERIENCE.map((experience) => (
-						<div class="relative pl-8 sm:pl-32 py-6 group">
-							<ExperienceItems {...experience} />
-						</div>
-					))
-				}
-			</div>
-		</div>
+<div class="w-full max-w-3xl mx-auto px-4 md:px-0">
+	<div class="relative ml-8">
+		{
+			EXPERIENCE.map((experience) => (
+				<ExperienceItems {...experience} />
+			))
+		}
 	</div>
 </div>

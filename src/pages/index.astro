@@ -9,9 +9,11 @@ import Hero from '../components/Hero.astro';
 import TitleSection from '../components/TitleSection.astro';
 import Smile from '../components/icons/Smile.astro';
 import SobreMi from '../components/SobreMi.astro';
+import Skills from '../components/Skills.astro';
+import Lightbulb from '../components/icons/Lightbulb.astro';
 ---
 
-<Layout title="Rodrigo Dorantes Portfolio | Desarrollador y porgramador web">
+<Layout title="Rodrigo Dorantes Portfolio | Ingeniero de Software Fullstack">
 	<main class="px-4">
 		<SectionContainer class="py-16 md:py-36">
 			<Hero />
@@ -20,24 +22,32 @@ import SobreMi from '../components/SobreMi.astro';
 	<div class="space-y-24 px-4">
 		<SectionContainer id="experiencia">
 			<TitleSection>
-				<Case clas="size-7" />
-				Experience Laboral
+				<Case class="size-7 text-emerald-500" />
+				Experiencia Laboral
 			</TitleSection>
 			<Experience />
 		</SectionContainer>
 
+		<SectionContainer id="habilidades">
+			<TitleSection>
+				<Lightbulb class="size-7 text-emerald-500" />
+				Habilidades Técnicas
+			</TitleSection>
+			<Skills />
+		</SectionContainer>
+
 		<SectionContainer id="proyectos">
 			<TitleSection>
-				<Code clas="size-7" />
-				Proyectos
+				<Code class="size-7 text-emerald-500" />
+				Proyectos Destacados
 			</TitleSection>
 			<Projects />
 		</SectionContainer>
 
 		<SectionContainer id="sobre-mi">
 			<TitleSection>
-				<Smile clas="size-7" />
-				Conoceme
+				<Smile class="size-7 text-emerald-500" />
+				Conóceme
 			</TitleSection>
 			<SobreMi />
 		</SectionContainer>
